@@ -10,19 +10,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         // Prepare arrays of data
         val itemList = arrayListOf<ItemModel>()
-        for (i in 1..24) {
-            itemList.add(
-                ItemModel(
-                    i,
-                    ('A' + i - 1).toString() + " Nguyen Van",
-                    "0965504095",
-                    ('a' + i - 1).toString() + "@gmail.com"
-                )
-            )
-        }
+        itemList.add(ItemModel(1, "Josefina Lehner", "0123456789", "@gmail.com"))
+        itemList.add(ItemModel(2, "Stuart Vandervort", "0123456789", "@gmail.com"))
+        itemList.add(ItemModel(3, "Madison Russel", "0123456789", "@gmail.com"))
+        itemList.add(ItemModel(4, "Halie Morar", "0123456789", "@gmail.com"))
+        itemList.add(ItemModel(5, "Karelle Simonis", "0123456789", "@gmail.com"))
+        itemList.add(ItemModel(6, "Hannah Welch", "0123456789", "@gmail.com"))
+        itemList.add(ItemModel(7, "Fanny Frami", "0123456789", "@gmail.com"))
         val adapter = MyCustomAdapter(itemList, this)
         val rcView: RecyclerView = findViewById(R.id.RVLayout)
         rcView.layoutManager = LinearLayoutManager(this)
